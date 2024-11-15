@@ -1,0 +1,38 @@
+CREATE DATABASE studentrecord;
+
+
+USE studentrecord;
+
+
+CREATE TABLE users (
+    userid INTEGER PRIMARY KEY AUTO_INCREMENT,
+    name TEXT NOT NULL,
+    username TEXT NOT NULL,
+    password TEXT NOT NULL
+);
+
+CREATE TABLE students (
+    studentid INTEGER PRIMARY KEY AUTO_INCREMENT,
+    roll_no TEXT NOT NULL UNIQUE,
+    name TEXT NOT NULL,
+    mobile_no INTEGER NOT NULL,
+    city TEXT NOT NULL,
+    college_name TEXT NOT NULL,
+    faculty TEXT NOT NULL
+    
+);
+
+CREATE TABLE marks (
+    markid INTEGER PRIMARY KEY AUTO_INCREMENT,
+    s_roll_no INTEGER NOT NULL,
+    physics INTEGER,
+    chemistry INTEGER,
+    math INTEGER,
+    geography INTEGER,
+    marathi INTEGER,
+    english INTEGER,
+    hindi INTEGER,
+    total_marks INTEGER,
+    percentage FLOAT
+    
+);

@@ -1,0 +1,96 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Marks Info</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f8f9fa;
+            padding: 20px;
+        }
+        .navbar{
+           float:right;
+          }
+
+        .container {
+            max-width: 600px;
+            margin-top: 30px;
+        }
+
+        .form-group {
+            margin-bottom: 20px;
+        }
+
+        .form-control {
+            height: 50px;
+            font-size: 16px;
+        }
+
+        .btn-primary {
+            width: 100px;
+            height: 50px;
+            font-size: 18px;
+            margin: 11px 11px 11px 11px;
+            border-radius:10px
+        }
+
+        .result-input {
+            margin-top: 10px;
+            font-size: 16px;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            width: 100%;
+        }
+    </style>
+</head>
+<body>
+    
+    <div class="navbar">
+        <a href="login.html" class="btn btn-primary">logout</a>
+    </div>
+    
+    <div class="container">
+        <form action="marks_info.php" method="post">
+            <h2 class="text-center">Marks Info</h2>
+            <div class="form-group">
+                <input type="number" class="form-control" name="s_roll_no" placeholder="student roll no" required>
+            </div>
+            <div class="form-group">
+                <input type="number" class="form-control" name="physics" placeholder="Physics" required>
+            </div>
+            <div class="form-group">
+                <input type="number" class="form-control" name="chemistry" placeholder="Chemistry" required>
+            </div>
+            <div class="form-group">
+                <input type="number" class="form-control" name="math" placeholder="Math" required>
+            </div>
+            <div class="form-group">
+                <input type="number" class="form-control" name="geography" placeholder="Geography" required>
+            </div>
+            <div class="form-group">
+                <input type="number" class="form-control" name="marathi" placeholder="Marathi" required>
+            </div>
+            <div class="form-group">
+                <input type="number" class="form-control" name="english" placeholder="English" required>
+            </div>
+            <div class="form-group">
+                <input type="number" class="form-control" name="hindi" placeholder="Hindi" required>
+            </div>
+            <div class="row justify-content-center">
+            <button type="submit" class="btn btn-primary" name="save">Save</button><br>
+            <button type="submit" class="btn btn-primary" name="calculate">calculate</button><br>
+            </div>
+            <input type="text" class="result-input" name="result" value="<?php echo $result; ?>" readonly>
+          
+            
+
+        </form>
+    </div>   
+</body>
+</html>
